@@ -30,7 +30,7 @@
       position: fixed;
       top: 0;
       left: 0;
-      width: 100dvw;   /* usa viewport dinámico en móviles */
+      width: 100dvw; 
       height: 100dvh;
       z-index: 1;
     }
@@ -42,8 +42,8 @@
       width: 100dvw;
       height: 100dvh;
       background: radial-gradient(ellipse at center,
-        rgba(138, 43, 226, 0.1) 0%,
-        rgba(30, 144, 255, 0.05) 40%,
+        rgba(106, 13, 173, 0.15) 0%,
+        rgba(155, 48, 255, 0.08) 40%,
         transparent 70%);
       animation: rotateNebula 60s infinite linear;
       z-index: 2;
@@ -64,11 +64,11 @@
       font-size: clamp(2.5rem, 6vw, 4rem);
       font-weight: 900;
       text-transform: uppercase;
-      background: linear-gradient(45deg, #00ffff, #ffffff, #0088ff);
+      background: linear-gradient(45deg, #9b30ff, #ffffff, #6a0dad);
       -webkit-background-clip: text;
       background-clip: text;
       color: transparent;
-      text-shadow: 0 0 30px rgba(0, 255, 255, 0.8);
+      text-shadow: 0 0 30px rgba(155, 48, 255, 0.8);
       animation: flyIn 4s ease-out forwards, thunderPulse 3s infinite 4s;
       transform: translateZ(-2000px) scale(0.1);
       opacity: 0;
@@ -80,10 +80,22 @@
       100% { transform: translateZ(0) scale(1); opacity: 1; }
     }
     @keyframes thunderPulse {
-      0%, 90% { filter: brightness(1); text-shadow: 0 0 30px rgba(0, 255, 255, 0.8); }
-      92% { filter: brightness(2); text-shadow: 0 0 50px #fff, 0 0 100px #0ff; }
-      96% { filter: brightness(2.5); text-shadow: 0 0 60px #fff, 0 0 120px #0ff; }
-      100% { filter: brightness(1); text-shadow: 0 0 30px rgba(0, 255, 255, 0.8); }
+      0%, 90% { 
+        filter: brightness(1); 
+        text-shadow: 0 0 30px rgba(155, 48, 255, 0.8); 
+      }
+      92% { 
+        filter: brightness(2); 
+        text-shadow: 0 0 50px #fff, 0 0 100px #9b30ff; 
+      }
+      96% { 
+        filter: brightness(2.5); 
+        text-shadow: 0 0 60px #fff, 0 0 120px #9b30ff; 
+      }
+      100% { 
+        filter: brightness(1); 
+        text-shadow: 0 0 30px rgba(155, 48, 255, 0.8); 
+      }
     }
 
     .buttons-container {
@@ -119,18 +131,18 @@
     }
 
     .galaxy-btn.neon-active {
-      border-color: #00ffff;
-      color: #00ffff;
-      background: rgba(0, 255, 255, 0.1);
-      box-shadow: 0 0 10px #00ffff,
-                  0 0 20px #00ffff,
-                  0 0 30px #00ffff,
+      border-color: #9b30ff;
+      color: #9b30ff;
+      background: rgba(155, 48, 255, 0.1);
+      box-shadow: 0 0 10px #9b30ff,
+                  0 0 20px #9b30ff,
+                  0 0 30px #9b30ff,
                   inset 0 0 10px rgba(255, 255, 255, 0.1);
     }
 
     .galaxy-btn:hover {
       transform: scale(1.05);
-      box-shadow: 0 0 20px #00ffff, 0 0 40px #00ffff;
+      box-shadow: 0 0 20px #ba55d3, 0 0 40px #9b30ff;
     }
 
     /* Responsive: en móviles 2 columnas centradas */
